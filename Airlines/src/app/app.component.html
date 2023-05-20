@@ -1,0 +1,23 @@
+<!-- Structural Directives (adding add,removing the element)
+Structure will be change(DOM)-->
+<h1 *ngIf="isDisplay , else componentRef" [ngStyle]="{'color':'blue',
+'font-family':'cursive'}">Angular Directives</h1>
+<ng-template #componentRef>
+  <h2>Component</h2>
+</ng-template> 
+
+<select class="form-select" aria-label="Default select example">
+  <option selected>select menu</option>
+  <option [ngClass]="{'highlight': ar=='Spring' }" *ngFor="let ar of arr">{{ar}}</option>
+</select>
+
+<div [ngSwitch]="tainerName">
+<div *ngSwitchCase="'arun'" ><h1>Spring</h1></div>
+<div  *ngSwitchCase="'abhijit'"><h1>Angular</h1></div>
+<div  *ngSwitchCase="'raveesh'"><h1>java</h1></div>
+<div  *ngSwitchCase="'Moshami'"><h1>JavaScript</h1></div>
+<div *ngSwitchCase="'subodh'"><h1>HTML</h1></div>
+</div>
+<div>
+  <input type="text" [(ngModel)]="title" (change)="printValue()">
+  <h2>{{ title }}</h2>

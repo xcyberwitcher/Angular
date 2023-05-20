@@ -1,0 +1,27 @@
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <select class="form-select" aria-label="Default select example" (change)="getItems($event)">
+            <option selected> ---select category----</option>
+            <option *ngFor="let cat of categoryList">{{cat}}</option>
+          </select>
+      </li>
+    </ol>
+  </nav>
+   
+   <input type="text" [(ngModel)]="email" [value]="email" (change)="updateEmail()">
+
+  <div class="row card-group">
+    <div class="card m-3" *ngFor="let item of itemsArray">
+      <!-- <img class="card-img-top" [src]="item.imagePath" > -->
+      <app-image [imagePath]="item.imagePath"
+      
+      (dataFromChildComponent)="receiveData($event)">
+      </app-image>
+      <div class="card-body">
+        <h5 class="card-title">Brand:{{item.brandName}}</h5>
+        <h5 class="card-title">Color:{{item.color}}</h5>
+        <h5 class="card-title">Price:{{item.price}}</h5>
+      </div>
+</div>
+     

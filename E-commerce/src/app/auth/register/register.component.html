@@ -1,0 +1,78 @@
+<div class="card text">
+    <h1>FormBuilder Form</h1>
+    <div class="card-header">User Form</div>
+    <div class="card-body">
+      <form class="form">
+        <div class="row">
+          <div class="col">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" formControlName="name" class="form-control" name="name" />
+          <div class="alert alert-danger" *ngIf="userForm.controls.name.touched
+          && userForm.controls.name.invalid">
+          <span>Name is Required</span>
+          </div>  
+        </div>
+          <div class="col">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" formControlName="email" class="form-control" name="email" />
+            <div class="alert alert-danger" *ngIf="userForm.controls.email.touched
+            && userForm.controls.email.invalid">
+            <span>Enter valid email</span>
+            </div>   
+        </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" formControlName="password" class="form-control" name="password" />
+          </div>
+          <div class="col">
+            <label for="contact" class="form-label">Contact</label>
+            <input type="tel" formControlName="contact" class="form-control" name="contact" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <label for="address" class="form-label">Address</label>
+            <input type="text" formControlName="address" class="form-control" name="address" />
+          </div>
+          <div class="col">
+            <label for="pincode" class="form-label">Pincode</label>
+            <input type="number" formControlName="pincode" class="form-control" name="pincode" />
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col">
+            <label for="state">State</label>
+            <select class="form-select" formControlName="state" name="state">
+              <option selected>Select State</option>
+              <option value="BR">BR</option>
+              <option value="JK">Jk</option>
+              <option value="BLR">BLR</option>
+            </select>
+          </div>
+  
+          <div class="col">
+            <label for="country">Country</label>
+            <select class="form-select" name="country" formControlName="country" >
+              <option selected>Select Country</option>
+              <option value="india">India</option>
+              <option value="Uk" >Uk</option>
+              <option value="USA" >Usa</option>
+            </select>
+          </div>
+        </div>
+  
+        <div class="row">
+          <div class="btn-group float-end" role="group">
+            <button type="button" class="btn btn-light m-4" (click)="OnCancel()">
+              Cancel
+            </button>
+            <button type="button" [disabled]="userForm.invalid" class="btn btn-primary m-4" (click)="submitForm()">Save</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  

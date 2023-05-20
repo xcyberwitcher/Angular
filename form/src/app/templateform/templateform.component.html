@@ -1,0 +1,47 @@
+<div class="card" style="width: 50rem;">
+    <h1>Template Driven Form</h1>
+    <div class="card-body">   
+<form #userForm="ngForm" (ngSubmit)="submitForm(userForm)">
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" 
+        class="form-control" 
+        id="name"
+        name="name"
+        required="true"
+        minlength="4"
+        pattern="subo"
+        placeholder="Enter Name"
+        ngModel
+        #name = "ngModel"
+        (change)="printFormControl(name)">
+    <div class="alert alert-danger" *ngIf="name.touched && name.invalid">
+    <span *ngIf="name.errors && name.errors['required']">Name is required</span>
+    <span *ngIf="name.errors && name.errors['minlength']">Minimum 4 Character Required</span>
+  </div>
+  </div>
+    <div class="form-group">
+      <label for="email">Email address</label>
+      <input type="email" class="form-control" id="email" name="email" placeholder="Enter email"  ngModel>
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" class="form-control" id="password" name="password" placeholder="Password"  ngModel>
+    </div>
+    <div class="form-group">
+    <label for="country">Country</label>
+    <select class="form-select" aria-label="Default select example" ngModel>
+        <option selected>Select Country</option>
+        <option value="1" ngModel>India</option>
+        <option value="2" ngModel>Uk</option>
+        <option value="3" ngModel>Usa</option>
+      </select>
+    </div>
+    <div class="form-group form-check">
+      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+      <label class="form-check-label" for="exampleCheck1">Terms & Condition</label>
+    </div>
+    <button type="button" class="btn btn-primary">Register</button>
+  </form>
+</div >
+</div>

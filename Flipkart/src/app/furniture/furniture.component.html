@@ -1,0 +1,18 @@
+<table border="1">
+    <thead>
+       <tr>
+        <th>Furntiture Type</th>
+        <th>Cost</th>
+        <th>Color</th>
+        <th>Brand</th>
+       </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let fur of furniture">
+            <td>{{fur.furnitureType}}</td>
+            <td>{{fur.cost}}</td>
+            <td>{{fur.colour}}</td>
+            <td>{{fur.brand}}</td>
+        </tr>
+    </tbody>
+</table>

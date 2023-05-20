@@ -1,0 +1,68 @@
+<div class="card text">
+  <div class="card-header">User Form</div>
+  <div class="card-body">
+    <form class="form" #userForm="ngForm" (ngSubmit)="submitUserform(userForm)">
+      <div class="row">
+        <div class="col">
+          <label for="name" class="form-label">Name</label>
+          <input type="text" ngModel class="form-control" name="name" />
+        </div>
+        <div class="col">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" ngModel class="form-control" name="email" />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <label for="password" class="form-label">Password</label>
+          <input type="password" ngModel class="form-control" name="password" />
+        </div>
+        <div class="col">
+          <label for="contact" class="form-label">Contact</label>
+          <input type="tel" ngModel class="form-control" name="contact" />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <label for="address" class="form-label">Address</label>
+          <input type="text" ngModel class="form-control" name="address" />
+        </div>
+        <div class="col">
+          <label for="pincode" class="form-label">Pincode</label>
+          <input type="number" ngModel class="form-control" name="pincode" />
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col">
+          <label for="country">State</label>
+          <select class="form-select" name="state" ngModel>
+            <option selected>Select State</option>
+            <option value="BR" ngModel>BR</option>
+            <option value="JK" ngModel>Jk</option>
+            <option value="BLR" ngModel>BLR</option>
+          </select>
+        </div>
+
+        <div class="col">
+          <label for="country">Country</label>
+          <select class="form-select" name="country" ngModel>
+            <option selected>Select Country</option>
+            <option value="india" ngModel>India</option>
+            <option value="Uk" ngModel>Uk</option>
+            <option value="USA" ngModel>Usa</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="btn-group float-end" role="group">
+          <button type="button" class="btn btn-light m-4" (click)="OnCancel()">
+            Cancel
+          </button>
+          <button type="submit" class="btn btn-primary m-4">Save</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

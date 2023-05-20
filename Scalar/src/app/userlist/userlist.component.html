@@ -1,0 +1,20 @@
+<nav class="navbar navbar-expand-md navbar-warning bg-warning">
+    <div class="mx-auto order-0">
+        <a class="navbar-brand mx-auto" href="#">Student List</a>
+    </div>
+</nav>
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <select class="form-select" aria-label="Default select example" (change)=" getSelectedInfo($event)">
+            <option value="disabled"> ---select category----</option>
+            <option *ngFor="let fal of tempdata" [value]="fal.first_name">{{fal.first_name}}</option>
+          </select>
+      </li>
+    </ol>
+  </nav>
+<app-grid [userDetails]="userListdata"
+ [gridcolumn]="columnDefs" 
+ [gridconf]="defaultColDef">
+</app-grid>
+

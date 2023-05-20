@@ -1,0 +1,27 @@
+<h1>Angular is a SPA Framework</h1>
+<h1>{{subjectName}}</h1>
+<h1>{{subject.name}}</h1>
+<h1>{{subject.version}}</h1>
+<div>
+    <ul>
+        <li *ngFor="let fruit of fruits">{{fruit}}</li>
+    </ul>
+</div>
+<table border="1">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Department</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let emp of employee">
+            <td>{{emp.name}}</td> 
+            <td>{{emp.age}}</td>
+            <td>{{emp.dept}}</td>
+         </tr>
+    </tbody>
+    
+</table>
+<app-image></app-image>

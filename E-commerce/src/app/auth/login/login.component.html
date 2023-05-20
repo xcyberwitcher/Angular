@@ -1,0 +1,28 @@
+<div class="card text">
+    <h1>FormBuilder Form</h1>
+    <div class="card-header">User Form</div>
+    <div class="card-body">
+      <form class="form">
+        <div class="row">
+          <div class="col">
+            <label for="name" class="form-label">Email</label>
+            <input type="text" formControlName="name" class="form-control" name="name" /> 
+        </div>
+          <div class="col">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" formControlName="email" class="form-control" name="email" />   
+        </div>
+        </div>
+  
+        <div class="row">
+          <div class="btn-group float-end" role="group">
+            <button type="button" class="btn btn-light m-4" (click)="OnCancel()">
+              Cancel
+            </button>
+            <button type="button" [disabled]="userForm.invalid" class="btn btn-primary m-4" (click)="submitForm()">Save</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  

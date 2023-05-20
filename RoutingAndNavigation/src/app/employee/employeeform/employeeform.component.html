@@ -1,0 +1,56 @@
+<div class="card text">
+    <div class="card-header">Employee Form</div>
+    <div class="card-body">
+      <form class="form" [formGroup]="userForm">
+        <div class="row">
+          <div class="col">
+            <label for="name" class="form-label">Employee Number</label>
+            <input type="number" ngModel class="form-control" name="employeeNumber" />
+          </div>
+          <div class="col">
+            <label for="name" class="form-label">Full Name</label>
+            <input type="text" ngModel class="form-control" name="fullName" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <label for="gender" class="form-label">Gender</label>
+            <input type="text" ngModel class="form-control" name="gender" />
+          </div>
+          <div class="col">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" ngModel class="form-control" name="mailId" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <label for="bond" class="form-label">Bond</label>
+            <input type="text" ngModel class="form-control" name="band" />
+          </div>
+          <div class="col">
+            <label for="role" class="form-label">Role</label>
+            <input type="text" ngModel class="form-control" name="role" />
+          </div>
+        </div>
+        <div class="row">
+        <div class="col">
+          <label for="employeestartDate" class="form-label">Employee Start Date</label>
+          <input type="date" ngModel class="form-control" name="employeeStartDate" />
+        </div>
+        <div class="col">
+          <label for="status" class="form-label">Employee Status</label>
+          <input type="text" ngModel class="form-control" name="employeeStatus" />
+        </div>
+      </div>
+        <div class="row">
+          <div class="btn-group float-end" role="group">
+            <button type="button" class="btn btn-light m-4" (click)="OnCancel()">
+              Cancel
+            </button>
+            <button type="submit" class="btn btn-primary m-4" (click)="submitForm()">Save</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  

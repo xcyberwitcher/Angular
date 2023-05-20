@@ -1,0 +1,13 @@
+<div class="card">
+    <div class="card-header">
+       EmployeeList
+      <button type="button" class="btn btn-primary btn-sm float-end" (click)=" openUserForm('create')">Create + </button>
+    </div>
+    <div class="card-body">
+        <app-grid [gridColumnList]="userListGridColumns" 
+        [gridConfigObject]="userListGridConfig"
+        [gridDataList]="empList" 
+        (customEvent)=" onRowClicked($event)"
+        ></app-grid>
+    </div>
+  </div>

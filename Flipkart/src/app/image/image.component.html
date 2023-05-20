@@ -1,0 +1,10 @@
+
+
+<img [src]="imagepath">
+
+<button (click)="getSetting()">Settings</button>
+
+<select (change)="getBrandPrice($event)">
+    <option value="default">--Select Option--</option>
+    <option [value]="brand.name" *ngFor="let brand of  brandArray">{{brand.name}}</option>
+</select>
